@@ -1,13 +1,17 @@
-import { Title } from '@/components'
+import { ProductGrid, Title } from '@/components'
+import { initialData } from '@/seed/seed'
+
+const products = initialData.products
 
 export default function Home () {
   return (
-    <div>
+    <section>
       <Title
         title='Tienda'
         subtitle='Todos los productos'
       />
-    </div>
+      <ProductGrid products={products} />
+    </section>
 
   )
 }
