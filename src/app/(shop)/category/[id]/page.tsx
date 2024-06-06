@@ -1,7 +1,6 @@
 import { ProductGrid, Title } from '@/components'
 import { Product, Category } from '@/interfaces'
 import { initialData } from '@/seed/seed'
-import { notFound } from 'next/navigation'
 
 interface Props{
   params:{

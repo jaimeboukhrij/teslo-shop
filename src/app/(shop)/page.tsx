@@ -5,7 +5,7 @@ const products = initialData.products
 
 export default function Home () {
   return (
-    <section>
+    <section className='px-6'>
       <Title
         title='Tienda'
         subtitle='Todos los productos'
