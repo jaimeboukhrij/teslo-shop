@@ -1,7 +1,16 @@
-export default function CartPage () {
+import { MobileCart } from '@/components'
+import { initialData } from '@/seed/seed'
+
+const productsOnCart = [
+  initialData.products[0],
+  initialData.products[1],
+  initialData.products[2]
+]
+
+export default function MobileCartPage () {
   return (
-    <div>
-      <h1>cart page</h1>
+    <div className='md:hidden'>
+      <MobileCart productsOnCart={productsOnCart} />
     </div>
   )
 }
