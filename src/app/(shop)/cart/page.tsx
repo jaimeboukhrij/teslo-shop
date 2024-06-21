@@ -1,4 +1,4 @@
-import { MobileCart } from '@/components'
+import { Cart, MobileCart } from '@/components'
 import { initialData } from '@/seed/seed'
 
 const productsOnCart = [
@@ -7,10 +7,11 @@ const productsOnCart = [
   initialData.products[2]
 ]
 
-export default function MobileCartPage () {
+export default function CartPage () {
   return (
-    <div className='md:hidden'>
+    <>
+      <Cart productsOnCart={productsOnCart} />
       <MobileCart productsOnCart={productsOnCart} />
-    </div>
+    </>
   )
 }

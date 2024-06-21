@@ -19,13 +19,16 @@ export const MobileCart = ({ productsOnCart }:Props) => {
           ))}
         </div>
         <Resume />
-
+        <div className='flex flex-col justify-center items-center gap-2'>
+          <p className='text-sm text-gray-500'>Tesla @ 2024</p>
+          <p className='text-sm text-gray-500'>Privacidad y legal</p>
+        </div>
       </div>
       <div className='fixed flex items-center bottom-0 left-0 px-2 h-[15vh] w-full bg-white rounded-md shadow-top'>
         <Link
-          href='/checkout/address'
+          href='/order/123'
           className='btn-primary w-full m-auto text-center'
-        >Caja
+        >Proceder al pago
         </Link>
       </div>
     </section>

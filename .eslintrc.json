@@ -2,5 +2,9 @@
   "extends": ["next/core-web-vitals","./node_modules/standard/eslintrc.json"],
   "globals": {
     "React":true
+  },
+  "rules": {
+    "react/display-name":"off",
+    "import/no-anonymous-default-export": "off"
   }
 }

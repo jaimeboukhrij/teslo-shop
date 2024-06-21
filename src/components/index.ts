@@ -11,6 +11,7 @@ export * from './product/quantity-selector/QuantitySelector'
 export * from './product/slideShow/ProductSlideShow'
 export * from './product/slideShow/ProductMobileSlideshow'
 
+export * from './cart/Cart'
 export * from './cart/products-cart/ProductsOnCart'
 export * from './cart/resume/Resume'
 export * from './cart/mobileCart/MobileCart'

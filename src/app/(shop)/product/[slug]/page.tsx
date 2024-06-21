@@ -16,7 +16,7 @@ export default function ProductPage ({ params }:Props) {
   if (!product) notFound()
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-20 gap-8'>
+    <div className='grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-20 gap-8 py-6'>
       <div className=' col-span-2 '>
         <ProductMobileSlideshow
           images={product.images}

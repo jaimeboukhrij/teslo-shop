@@ -3,7 +3,7 @@ export type Type = 'shirts'|'pants'|'hoodies'|'hats';
 export type Category = 'men'|'women'|'kid'|'unisex'
 
 export interface Product {
-  // id:string,
+  id:string,
   description: string;
   images: string[];
   inStock: number;
@@ -12,7 +12,7 @@ export interface Product {
   slug: string;
   tags: string[];
   title: string;
-  type: Type;
+  // type: Type;
   gender: Category
 }
 
