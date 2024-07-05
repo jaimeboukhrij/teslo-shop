@@ -1,14 +1,8 @@
-import React from 'react'
-import { Product } from '@/interfaces'
 import { ProductsOnCart } from './products-cart/ProductsOnCart'
 import { Resume } from './resume/Resume'
 import Link from 'next/link'
 
-interface Props{
-  productsOnCart: Product[]
-}
-
-export const Cart = ({ productsOnCart }:Props) => {
+export const Cart = () => {
   return (
     <section className='hidden md:flex flex-col justify-between  pt-8 max-w-[1400px] m-auto h-full'>
       <div className='fle flex-col justify-start p-5'>
@@ -18,9 +12,7 @@ export const Cart = ({ productsOnCart }:Props) => {
 
           <div className='overflow-auto w-full '>
             <div className='flex flex-col gap-12 py-8 '>
-              {productsOnCart.map((product) => (
-                <ProductsOnCart product={product} key={product.slug} />
-              ))}
+              <ProductsOnCart />
             </div>
           </div>
 
