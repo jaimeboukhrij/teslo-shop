@@ -15,11 +15,15 @@ export const CartIcon = () => {
 
   return (
     <Link
-      href='/cart'
+      href={
+        (productsOnCart === 0 && loaded)
+          ? '/empty'
+          : '/cart'
+}
       className='relative'
     >
       {loaded &&
-        <span className='absolute text-xs rounded-full px-1 font-bold -top-2 -right-2 bg-blue-700 text-white'>
+        <span className='absolute text-xs rounded-full px-1 font-bold -top-2 -right-2 bg-blue-700 text-white fadeIn'>
           {productsOnCart}
         </span>}
       <IoCartOutline className='w-5 h-5' />

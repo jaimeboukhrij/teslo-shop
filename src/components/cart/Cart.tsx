@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const Cart = () => {
   return (
-    <section className='hidden md:flex flex-col justify-between  pt-8 max-w-[1400px] m-auto h-full'>
+    <section className='hidden md:flex flex-col justify-between  pt-8 max-w-[1400px] m-auto h-full '>
       <div className='fle flex-col justify-start p-5'>
         <h2 className='text-3xl font-semibold mb-6 '>Carrito</h2>
 

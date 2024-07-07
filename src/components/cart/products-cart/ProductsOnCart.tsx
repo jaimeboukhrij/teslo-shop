@@ -3,9 +3,15 @@ import Image from 'next/image'
 import { QuantitySelector } from '../../product/quantity-selector/QuantitySelector'
 import { useCartStore } from '@/store'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 export const ProductsOnCart = () => {
   const productsOnCart = useCartStore(state => state.cart)
+  const updateQuantityCart = useCartStore(state => state.updateQuantityCart)
+  const removeItemCart = useCartStore(state => state.removeItemCart)
+  if (productsOnCart.length === 0) {
+    redirect('/empty')
+  }
 
   return (
     productsOnCart.map(product => (
@@ -28,7 +34,7 @@ export const ProductsOnCart = () => {
           <Link
             href={`/product/${product.slug}`}
           >
-            <h6 className='text-gray-900 lg:text-xl'>{product.title}</h6>
+            <h6 className='text-gray-900 lg:text-xl'> {product.size}-  {product.title}</h6>
 
           </Link>
           <span className='flex gap-6'>
@@ -36,9 +42,13 @@ export const ProductsOnCart = () => {
               quantity={product.quantity}
               titleClassName='hidden'
               countClassName='rounded bg-gray-100 p-1'
-              // onQuantityChanged={onQuantityChange}
+              onQuantityChanged={(value) => updateQuantityCart(product, value)}
             />
-            <button className='font-normal underline text-gray-600'>Quitar</button>
+            <button
+              onClick={() => removeItemCart(product)}
+              className='font-normal underline text-gray-600'
+            >Quitar
+            </button>
           </span>
         </div>
         <span className='w-[25%] flex justify-center  lg:text-lg font-semibold'>{product.price.toFixed(2)} €</span>
