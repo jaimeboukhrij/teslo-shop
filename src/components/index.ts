@@ -18,3 +18,5 @@ export * from './cart/resume/Resume'
 export * from './cart/mobileCart/MobileCart'
 
 export * from './ui/pagination/Pagination'
+
+export * from './provider/Provider'
